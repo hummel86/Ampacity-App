@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>SCOTTHUMMEL-PC</Machine>
+    <WindowsUser>Scott Hummel</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>7DC0B558C6AF8EB855818D63B2456C23F04A3199B0BDE543810F2F0CFD90BBED</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>593a2a2e-fcb5-4824-b856-b80b19c284bb_1.0.0.0_neutral__esx82z4qq1sbe</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>593a2a2e-fcb5-4824-b856-b80b19c284bb_esx82z4qq1sbe!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>593a2a2e-fcb5-4824-b856-b80b19c284bb</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Scott Hummel</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Scott Hummel\Documents\GitHub\Ampacity-App\Ampacity_Calculator\Ampacity_Calculator\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-02-11T19:40:49.085</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Scott Hummel\Documents\GitHub\Ampacity-App\Ampacity_Calculator\Ampacity_Calculator\bin\Debug\Ampacity_Calculator.exe">
+      <PackagePath>Ampacity_Calculator.exe</PackagePath>
+      <Modified>2014-02-12T21:23:28.758</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Scott Hummel\Documents\GitHub\Ampacity-App\Ampacity_Calculator\Ampacity_Calculator\bin\Debug\Ampacity_Calculator.pdb">
+      <PackagePath>Ampacity_Calculator.pdb</PackagePath>
+      <Modified>2014-02-12T21:23:28.730</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Scott Hummel\Documents\GitHub\Ampacity-App\Ampacity_Calculator\Ampacity_Calculator\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T01:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Scott Hummel\Documents\GitHub\Ampacity-App\Ampacity_Calculator\Ampacity_Calculator\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T01:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Scott Hummel\Documents\GitHub\Ampacity-App\Ampacity_Calculator\Ampacity_Calculator\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T01:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Scott Hummel\Documents\GitHub\Ampacity-App\Ampacity_Calculator\Ampacity_Calculator\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T01:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Scott Hummel\Documents\GitHub\Ampacity-App\Ampacity_Calculator\Ampacity_Calculator\Common\ReadMe.txt">
+      <PackagePath>Common\ReadMe.txt</PackagePath>
+      <Modified>2014-02-11T19:39:53.351</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Scott Hummel\Documents\GitHub\Ampacity-App\Ampacity_Calculator\Ampacity_Calculator\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+      <Modified>2014-02-11T19:19:13.039</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Scott Hummel\Documents\GitHub\Ampacity-App\Ampacity_Calculator\Ampacity_Calculator\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+      <Modified>2012-06-26T21:19:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Scott Hummel\Documents\GitHub\Ampacity-App\Ampacity_Calculator\Ampacity_Calculator\bin\Debug\MainPage.xaml">
+      <PackagePath>MainPage.xaml</PackagePath>
+      <Modified>2014-02-12T21:23:27.492</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Scott Hummel\Documents\GitHub\Ampacity-App\Ampacity_Calculator\Ampacity_Calculator\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2014-02-11T19:40:49.027</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
