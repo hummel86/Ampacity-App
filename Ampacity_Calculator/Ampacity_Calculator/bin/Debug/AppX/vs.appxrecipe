@@ -22,11 +22,11 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Scott Hummel\Documents\GitHub\Ampacity-App\Ampacity_Calculator\Ampacity_Calculator\bin\Debug\Ampacity_Calculator.exe">
       <PackagePath>Ampacity_Calculator.exe</PackagePath>
-      <Modified>2014-02-12T21:23:28.758</Modified>
+      <Modified>2014-02-15T01:15:54.081</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Scott Hummel\Documents\GitHub\Ampacity-App\Ampacity_Calculator\Ampacity_Calculator\bin\Debug\Ampacity_Calculator.pdb">
       <PackagePath>Ampacity_Calculator.pdb</PackagePath>
-      <Modified>2014-02-12T21:23:28.730</Modified>
+      <Modified>2014-02-15T01:15:54.053</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Scott Hummel\Documents\GitHub\Ampacity-App\Ampacity_Calculator\Ampacity_Calculator\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
@@ -62,7 +62,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Scott Hummel\Documents\GitHub\Ampacity-App\Ampacity_Calculator\Ampacity_Calculator\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
-      <Modified>2014-02-12T21:23:27.492</Modified>
+      <Modified>2014-02-14T21:31:58.728</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Scott Hummel\Documents\GitHub\Ampacity-App\Ampacity_Calculator\Ampacity_Calculator\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>

@@ -13,7 +13,7 @@
     <Page.Resources>
 
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">Ampacity Calculator</x:String>
+        <x:String x:Key="AppName">Volt Drop Calculator</x:String>
     </Page.Resources>
 
     <!--
@@ -41,21 +41,45 @@
                 <RowDefinition Height="0.2*"/>
                 <RowDefinition Height="0.2*"/>
                 <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
             </Grid.RowDefinitions>
          
             <TextBlock Text="Length of Wire (m):" Grid.Column="1" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            <TextBox Grid.Column="2" FontSize="25" Height="50" />
+            <TextBox Name="wire_length" Grid.Column="2" FontSize="25" Height="50" />
 
             <TextBlock Text="Current (A):" Grid.Row="1" Grid.Column="1" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            <TextBox Grid.Column="2" Grid.Row="1" FontSize="25" Height="50" />
+            <TextBox Name="current" Grid.Column="2" Grid.Row="1" FontSize="25" Height="50" />
 
             <TextBlock Text="Material:" Grid.Row="2" Grid.Column="1" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             
             <!-- The code below creates the combo box and sets the default value to Cu-->
-            <ComboBox Grid.Column="2" Grid.Row="2" FontSize="25" Height="50" SelectedIndex="0">
+            <ComboBox Name="material" Grid.Column="2" Grid.Row="2" FontSize="25" Height="50" SelectedIndex="0">
                 <ComboBoxItem  Name="Cu">Cu</ComboBoxItem>
                 <ComboBoxItem  Name="Al">Al</ComboBoxItem>
             </ComboBox>
+
+            <TextBlock Text="Voltage (V):" Grid.Row="3" Grid.Column="1" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <TextBox Name="voltage" Grid.Column="2" Grid.Row="3" FontSize="25" Height="50" />
+
+            <TextBlock Text="Max Volt Drop (%):" Grid.Row="4" Grid.Column="1" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <TextBox Name="volt_drop_percent" Grid.Column="2" Grid.Row="4" FontSize="25" Height="50" />
+
+            <TextBlock Text="Phases:" Grid.Row="5" Grid.Column="1" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+            <!-- The code below creates the combo box and sets the default value to Cu-->
+            <ComboBox Name="phases" Grid.Column="2" Grid.Row="5" FontSize="25" Height="50" SelectedIndex="0">
+                <ComboBoxItem  Name="Single">Single</ComboBoxItem>
+                <ComboBoxItem  Name="Three">Three</ComboBoxItem>
+            </ComboBox>
+            
+            <Button Grid.Column="2" Grid.Row="6" Height="50" Width="100" Background="Green" FontSize="25" HorizontalAlignment="Right" Click="Button_Click">
+                Run
+            </Button>
+            
+            <TextBlock Name="error_message" Grid.Column="3" Grid.Row="0" FontSize="15" HorizontalAlignment="Center" Foreground="Red">
+                
+            </TextBlock>
 
         </Grid>
 

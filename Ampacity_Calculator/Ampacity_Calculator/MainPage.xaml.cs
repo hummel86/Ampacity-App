@@ -48,5 +48,61 @@ namespace Ampacity_Calculator
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // Get the values the user inputs into the text boxes array
+            TextBox[] user_inputs;
+            user_inputs = new TextBox[4];
+
+            user_inputs[0] = wire_length;
+            user_inputs[1] = voltage;
+            user_inputs[2] = current;
+            user_inputs[3] = volt_drop_percent;
+
+            // Gets the material index, 0 for Cu, 1 for Al
+            int material_index = material.SelectedIndex;
+
+            // Gets the phase index, 0 for single, 1 for three
+            int phase_index = phases.SelectedIndex;
+
+            // Variable if number is valid input
+            int number;
+
+            //
+            bool error_flag = false;
+
+            // Brush colors for borders
+            SolidColorBrush RedBrush = new SolidColorBrush(Windows.UI.Colors.Red);
+            SolidColorBrush noColor = null;
+
+            // If input is valid, assign no border, else assign red border, loops through the user inputs
+            for (int i = 0; i <= 3; i++)
+            {
+                if (Int32.TryParse(user_inputs[i].Text, out number))
+                {
+                    user_inputs[i].BorderBrush = noColor;
+                    
+
+                }
+                else
+                {
+                    user_inputs[i].BorderBrush = RedBrush;
+                    if (error_flag == false)
+                    {
+                        error_flag = true;
+                    }
+                }
+
+            }
+            if (error_flag == true)
+            {
+                error_message.Text = "*There are errors with your inputs.";
+            }
+            else
+            {
+                error_message.Text = "";
+            }
+        }
     }
 }
