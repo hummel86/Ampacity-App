@@ -49,6 +49,10 @@ namespace Ampacity_Calculator
         {
         }
 
+        
+
+       
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             // Get the values the user inputs into the text boxes array
@@ -97,11 +101,69 @@ namespace Ampacity_Calculator
             }
             if (error_flag == true)
             {
+                ResultsVD.Text = "";
+                ResultsVDper.Text = "";
+                chosenSize.Text = "";
                 error_message.Text = "*There are errors with your inputs.";
+                return;
             }
             else
             {
                 error_message.Text = "";
+            }
+
+            // Get the length of the wire and convert to double
+            double length=Convert.ToDouble( user_inputs[0].Text);
+            
+            // Get the current and convert to double
+            double I = Convert.ToDouble(user_inputs[2].Text);
+            
+            // Get the system voltage and convert to double
+            double system_voltage = Convert.ToDouble(user_inputs[1].Text);
+
+            double desired_VD = Convert.ToDouble(user_inputs[3].Text);
+
+            // 30 degrees C ambient, Single insulated conductors, 0-2000 V, 72 degrees C conductor rating
+            string[] wire_size_key = {"14 AWG", "12 AWG", "10 AWG", "8 AWG", "6 AWG", "4 AWG", "3 AWG" , "2 AWG", "1 AWG", "1/0 AWG","2/0 AWG","3/0 AWG","4/0 AWG", "250 kcmil", "300 kcmil", "350 kcmil", "400 kcmil" , "500 kcmil" ,"600 kcmil", "750 kcmil"} ;
+            double[] Cu_ampacity_key = {30,35,50,70,95,125,145,170,195,230,265,310,360,405,445,505,545,620,690,785};
+            double[] Al_ampacity_key= {0,30,40,55,75,100,115,135,155,180,210,240,280,315,350,395,425,485,540,620}; 
+
+            // 600 V cables, 3 phase, 60 Hz, 75 degrees C
+            double[] Cu_res_key = {3.1,2.0,1.2,0.78,0.49,0.31,0.25,0.19,0.15,0.12,0.10,0.077,0.062,0.052,0.044,0.038,0.033,0.027,0.023,0.019};
+            double[] Al_res_key = {0,3,2,2.0,1.3,0.81,0.51,0.40,0.32,0.25,0.20,0.16,0.13,0.10,0.085,0.071,0.061,0.054,0.043,0.036,0.029};
+
+            bool correct_wire_size=false;
+            double VD=0;
+            double percent_VD=0;
+            int j=0;
+
+            for (j=0; correct_wire_size == false && j<=19; j++)
+            {
+                if (Cu_ampacity_key[j] > I)
+                {
+                    // Calculate the voltage drop and percent VD of the system 
+                    VD = (2 * length * Cu_res_key[j] * I) / 1000;
+                    percent_VD = (VD / system_voltage) * 100;
+
+                    if (percent_VD <= desired_VD)
+                    {
+                        correct_wire_size = true;
+                    }
+                }  
+            }
+            if (correct_wire_size == true)
+            {
+                // Return the results to the text boxes for the user to see
+                ResultsVD.Text = "Voltage Drop= " + VD + " V";
+                ResultsVDper.Text = "Percent VD= " + percent_VD + "%";
+                chosenSize.Text = "Wire Size: " + wire_size_key[j];
+            }
+
+            else{
+                error_message.Text = "*Your voltage drop could not be met or too much current exists.";
+                ResultsVD.Text = "";
+                ResultsVDper.Text = "";
+                chosenSize.Text = "";
             }
         }
     }
